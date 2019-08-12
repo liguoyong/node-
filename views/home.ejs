@@ -1,0 +1,14 @@
+    <%- include('components/header') %>
+        <div class="layui-row layui-col-space15">
+          <div class="layui-col-md8">
+          <ul class="fly-list">
+             <% posts.forEach(function (post) { %>
+            <%- include('components/post-content', { post: post }) %>
+            <% }) %> 
+          </ul>
+        </div>
+        <div class="layui-col-md4">
+          
+        </div>
+        </div>
+      <%- include('components/footer') %>
