@@ -1,6 +1,167 @@
-<%- include('header') %>
+<%- include('components/header') %>
+<script src="/static/js/wangEditor.min.js"></script>
+<style>
+    html {
+        background-color: #F2F2F2;
+    }
+</style>
+<div class="layui-row layui-col-space15">
+    <div class="layui-col-md8">
+        <ul class="fly-list">
+            <%- include('components/post-content') %>
+        </ul>
+    </div>
 
-<%- include('components/post-content') %>
-<%- include('components/comments') %>
+    <div class="layui-col-md8 content detail">
 
-<%- include('footer') %>
+        <div class="fly-panel detail-box" id="flyReply">
+            <fieldset class="layui-elem-field layui-field-title" style="text-align: center;">
+                <legend>回帖</legend>
+            </fieldset>
+            <ul class="jieda" id="jieda">
+                <%- include('components/comments') %>
+            </ul>
+            <div style="text-align: center"> </div> <a name="comment"> </a>
+        </div>
+        <div class="layui-form layui-form-pane">
+            <form class="layui-form" method="post">
+                <input name="postId" value="<%= post._id %>" hidden>
+                <div class="layui-form-item">
+                    <div class="layui-input-line" id="div3">
+                    </div>
+                </div>
+                <textarea id="text1" name="content" style="width:100%; height:200px;" hidden></textarea>
+                <div class="layui-form-item">
+                    <button class="layui-btn" lay-filter="demo1" lay-submit="">留言</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<%- include('components/footer') %>
+<script>
+    //富文本编辑器
+    var E = window.wangEditor
+    var editor2 = new E('#div3')
+    editor2.customConfig.onfocus = function () {
+        console.log("onfocus")
+    }
+    editor2.customConfig.onchange = function (html) {
+        // 监控变化，同步更新到 textarea
+        $('#text1').val(html)
+    }
+    editor2.create();
+    editor2.txt.clear()
+    layui.use('layer', function () { //独立版的layer无需执行这一句
+        var layer = layui.layer; //独立版的layer无需执行这一句
+    });
+    //插入字符串
+    let insertStr = (soure, start, newStr) => {
+        return soure.slice(0, start) + newStr + soure.slice(start)
+    }
+    //滚动效果
+    function goErrorScrollTop() {
+        $('html , body').animate({ scrollTop: $('#div3').offset().top }, 500);
+    }
+
+    var getQueryString = function (name,url) {
+        // 获取url参数值
+        var queryStr = url?url:(window.location.hash || window.location.search);
+        var paramsStr = queryStr.substring(1);
+        paramsStr = paramsStr.replace(/\?/g, '&');
+        if (paramsStr) {
+            var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
+            var r = paramsStr.match(reg);
+            if (r !== null) return decodeURI(r[2]);
+            return null
+        }
+        return null
+   };
+    //点击回复
+    $('.jieda .reply').click(function () {
+        var id = $(this).parents('li').attr("data-id");
+        var name = $(this).parents('li').attr("data-name");
+        var html = editor2.txt.html();
+        var adhtml = "<a href=/posts?author=" + id + " style='color: #4ada76;padding-right: 6px;'>@" + name + "</a>";
+        var hasuser = 'author=' + id;
+        if (html.indexOf(hasuser) == -1) {
+            editor2.txt.html(insertStr(html, 3, adhtml));
+            goErrorScrollTop();
+        }
+    })
+    //删除帖子
+    $('.jieda .delete').click(function () {
+        var href = $(this).attr('bind_loction');
+        $.ajax({
+            type: 'GET',
+            url: href,
+            success: function (res) {
+                console.log(res)
+                var res = JSON.parse(res);
+                if (res.code == 0) {
+                    location.reload();
+                } else {
+                    alert(res.msg);
+                }
+            },
+            error: function () {
+
+            }
+        })
+    });
+    layui.use(['form', 'layedit', 'laydate'], function () {
+        var form = layui.form
+            , layer = layui.layer
+            , layedit = layui.layedit
+            , laydate = layui.laydate;
+
+
+        //自定义验证规则
+        form.verify({
+            title: function (value) {
+                if (value.length < 5) {
+                    return '标题至少得5个字符啊';
+                }
+            }
+            , pass: [
+                /^[\S]{6,12}$/
+                , '密码必须6到12位，且不能出现空格'
+            ]
+            , content: function (value) {
+                layedit.sync(editIndex);
+            }
+        });
+        //监听提交
+        form.on('submit(demo1)', function (data) {
+            var authorList = [];
+            //
+            $.each($('.w-e-text a'), function (index, item) {
+                //截取单一参数在后面加上[1],截取所有则不加。。。
+                var href = $(this).attr('href');
+                authorList.push(getQueryString('author',href));
+            });
+            var data =data.field;
+            data.pushId =authorList.join();
+            data.content_txt =editor2.txt.text();
+            if(editor2.txt.text()){
+                $.ajax({
+                type:"POST",
+                url:"/comments",
+                data:data,
+                success:function(res){
+                    if($.type(res)=='object'){
+                        res=res;
+                    }else{
+                        res=JSON.parse(res)
+                    }
+                    if(res.code==0){
+                        location.reload()
+                    }
+                }
+            })
+            }
+            
+            return false;
+        });
+    });
+</script>

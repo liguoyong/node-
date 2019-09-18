@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+<video id="video" controls="controls">
+<source src="http://ok.renzuida.com/1909/解毒剂.HD1280高清中英双字版.mp4">
+</video>
+<div id="imgbox"></div>
+<script type="text/javascript">
+(function(){
+var video, output;
+var scale = 0.8;
+var init = function() {
+imgbox = document.getElementById("imgbox");
+video = document.getElementById("video");
+video.addEventListener('loadeddata',captureImage);
+};
+
+var captureImage = function() {
+            var canvas = document.createElement("canvas");//创建一个canvas
+            canvas.width = video.videoWidth * scale;//设置canvas的宽度为视频的宽度
+            canvas.height = video.videoHeight * scale;//设置canvas的高度为视频的高度
+            canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);//绘制图像
+
+            var img = document.createElement("img");//创建img
+			img.setAttribute("crossOrigin",'anonymous');
+            img.src = canvas.toDataURL("image/png");//将绘制的图像用img显示出来
+            imgbox.appendChild(img);//将img添加到imgbox里
+};
+
+init();
+})();
+</script>
+</body>
+</html>

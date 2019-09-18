@@ -1,0 +1,38 @@
+<div class="layui-tab layui-tab-brief" lay-filter="user" id="LAY_msg" style="margin-top: 15px;"> <button
+        class="layui-btn layui-btn-danger layui-hide" id="LAY_delallmsg">清空全部消息</button>
+    <div id="LAY_minemsg" style="margin-top: 10px;">
+        <div class="fly-none">您暂时没有最新消息</div>
+    </div>
+</div>
+<script>
+    var pushId = '<% if (user) { %><%= user._id %><% } else { %>""<% } %>';
+    $.ajax({
+        type: "POST",
+        url: '/posts/getpush',
+        data: { "pushId": pushId },
+        success: function (res) {
+
+            if (res) {
+                var res = JSON.parse(res);
+                console.log(res);
+                if (res.code == 0) {
+                    $("#LAY_msg #LAY_minemsg").empty();
+
+                    var apdom = "";
+                    var data =res.data;
+                    $.each(data, function (index, item) {
+                        apdom += `
+                    <li data-id="${data[index].postId}" data-to="${data[index]._id}" class="jieda-daan">
+                        <div class="detail-body layui-text jieda-body photos"><p>${data[index].content_txt}<span>${data[index].created_at}</span><span type="reply"><a class="delete" href="/posts/${data[index].postId}">查看</a></span>
+                        <span class="reply" type="reply">删除</span></p>
+                    </div>
+                    </li>
+                    `
+                    })
+                    var ul = $('<ul>' + apdom + '</ul>')
+                    $("#LAY_msg #LAY_minemsg").append(ul)
+                }
+            }
+        }
+    })
+</script>

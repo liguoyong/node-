@@ -1,43 +1,58 @@
-<!-- <div class="post-content">
-  <div class="ui grid">
-    <div class="four wide column">
-      <a class="avatar avatar-link"
-         href="/posts?author=<%= post.author._id %>"
-         data-title="<%= post.author.name %> | <%= ({m: '男', f: '女', x: '保密'})[post.author.gender] %>"
-         data-content="<%= post.author.bio %>">
-        <img class="avatar" src="/img/<%= post.author.avatar %>">
-      </a>
-    </div>
-
-    <div class="eight wide column">
-      <div class="ui segment">
-        <h3><a href="/posts/<%= post._id %>"><%= post.title %></a></h3>
-        <pre><%- post.content %></pre>
-        <div>
-          <span class="tag"><%= post.created_at %></span>
-          <span class="tag right">
-            <span>浏览(<%= post.pv || 0 %>)</span>
-            <span>留言(<%= post.commentsCount || 0 %>)</span>
-
-            <% if (user && post.author._id && user._id.toString() === post.author._id.toString()) { %>
-              <div class="ui inline dropdown">
-                <div class="text"></div>
-                <i class="dropdown icon"></i>
-                <div class="menu">
-                  <div class="item"><a href="/posts/<%= post._id %>/edit">编辑</a></div>
-                  <div class="item"><a href="/posts/<%= post._id %>/remove">删除</a></div>
-                </div>
-              </div>
-            <% } %>
-
-          </span>
-        </div>
-      </div>
-    </div>
-  </div>
-</div> -->
-
-
+<style>
+.ui.inline.dropdown {
+    cursor: pointer;
+    display: inline-block;
+    color: inherit;
+    width: 50px;
+    height: 20px;
+}
+.ui.dropdown {
+    position: relative;
+    outline: 0;
+    text-align: left;
+    transition: box-shadow .1s ease,width .1s ease,-webkit-box-shadow .1s ease;
+    -webkit-tap-highlight-color: transparent;
+}
+.ui.inline.dropdown .dropdown.icon {
+    margin: 0 .21428571em 0 .21428571em;
+    vertical-align: baseline;
+}
+.ui.inline.dropdown .menu {
+    cursor: auto;
+    margin-top: .21428571em;
+    border-radius: .28571429rem;
+}
+.ui.dropdown .menu {
+    cursor: auto;
+    position: absolute;
+    display: none;
+    outline: 0;
+    top: 100%;
+    min-width: -webkit-max-content;
+    min-width: -moz-max-content;
+    min-width: max-content;
+    margin: 0;
+    padding: 0 0;
+    background: #fff;
+    font-size: 1em;
+    text-shadow: none;
+    text-align: left;
+    -webkit-box-shadow: 0 2px 3px 0 rgba(34,36,38,.15);
+    box-shadow: 0 2px 3px 0 rgba(34,36,38,.15);
+    border: 1px solid rgba(34,36,38,.15);
+    border-radius: .28571429rem;
+    -webkit-transition: opacity .1s ease;
+    transition: opacity .1s ease;
+    z-index: 11;
+    will-change: transform,opacity;
+}
+.ui.dropdown:hover>div{
+  display:block;
+}
+.layui-container .fly-list-info{
+  overflow: inherit;
+}
+</style>
 <li>
   <a class="fly-avatar" href="/posts?author=<%= post.author._id %>"
     data-title="<%= post.author.name %> | <%= ({m: '男', f: '女', x: '保密'})[post.author.gender] %>"
@@ -57,10 +72,14 @@
         <% if (user && post.author._id && user._id.toString() === post.author._id.toString()) { %>
         <div class="ui inline dropdown">
           <div class="text"></div>
-          <i class="dropdown icon"></i>
+          <i class="layui-icon layui-icon-triangle-d" style="font-size: 7px;"></i>
           <div class="menu">
-            <div class="item"><a href="/posts/<%= post._id %>/edit">编辑</a></div>
-            <div class="item"><a href="/posts/<%= post._id %>/remove">删除</a></div>
+            <div class="layui-card">
+                <div class="layui-card-body">
+                    <a href="/posts/<%= post._id %>/edit">编辑</a><br/>
+                    <a href="/posts/<%= post._id %>/remove">删除</a>
+                </div>
+              </div>
           </div>
         </div>
         <% } %>

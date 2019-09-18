@@ -1,5 +1,5 @@
-const path = require('path')
-const express = require('express')
+const path = require('path')//node路由模块
+const express = require('express')//引入node的expres框架
 const session = require('express-session')
 const MongoStore = require('connect-mongo')(session)
 const flash = require('connect-flash')
@@ -8,9 +8,10 @@ const routes = require('./routes')
 const pkg = require('./package')
 const winston = require('winston')
 const expressWinston = require('express-winston')
-
 const app = express()
-
+const server = require('http').createServer(app);
+const io = require('socket.io')(server);
+//监听客户端链接,回调函数会传递本次链接的socket
 // 设置模板目录
 app.set('views', path.join(__dirname, 'views'))
 // 设置模板引擎为 ejs
@@ -51,6 +52,10 @@ app.use(function (req, res, next) {
   res.locals.user = req.session.user
   res.locals.success = req.flash('success').toString()
   res.locals.error = req.flash('error').toString()
+  res.locals.common='';
+  if (req.session.user && req.session.user.pushNb) {
+    res.locals.common = req.session.user.pushNb
+  }
   next()
 })
 
@@ -86,7 +91,16 @@ app.use(function (err, req, res, next) {
   req.flash('error', err.message)
   res.redirect('/posts')
 })
-
+io.on('connection',
+  function (socket) {
+    // 监听客户端发送的信息
+    socket.on("sentToServer", message => {
+      // 给客户端返回信息
+      io.emit("sendToClient", { message });
+    });
+    // 监听连接断开事件
+  }
+);
 if (module.parent) {
   // 被 require，则导出 app
   module.exports = app

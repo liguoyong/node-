@@ -1,0 +1,42 @@
+{ 
+    "_id" : ObjectId("5d4b874c0f52fe13244c9fe6"), 
+    "author" : ObjectId("5d4b86d50f52fe13244c9fe5"), 
+    "title" : "这是我的第一个文章", 
+    "content" : "这是我的第一个文章这是我的第一个文章这是我的第一个文章这是我的第一个文章这是我的第一个文章这是我的第一个文章这是我的第一个文章这是我的第一个文章这是我的第一个文章这是我的第一个文章", 
+    "pv" : NumberInt(27)
+}
+{ 
+    "_id" : ObjectId("5d4b87890f52fe13244c9fe7"), 
+    "author" : ObjectId("5d4b86d50f52fe13244c9fe5"), 
+    "title" : "这是我的第二个文章", 
+    "content" : "这是我的第二个文章这是我的第二个文章这是我的第二个文章这是我的第二个文章这是我的第二个文章这是我的第二个文章这是我的第二个文章这是我的第二个文章这是我的第二个文章这是我的第二个文章这是我的第二个文章这是我的第二个文章", 
+    "pv" : NumberInt(20)
+}
+{ 
+    "_id" : ObjectId("5d4b90f30f52fe13244c9fe9"), 
+    "author" : ObjectId("5d4b90d00f52fe13244c9fe8"), 
+    "title" : "第二个账号的文章", 
+    "content" : "第二个账号的文章第二个账号的文章第二个账号的文章第二个账号的文章第二个账号的文章第二个账号的文章第二个账号的文章第二个账号的文章第二个账号的文章第二个账号的文章第二个账号的文章第二个账号的文章", 
+    "pv" : NumberInt(156)
+}
+{ 
+    "_id" : ObjectId("5d4d1b657a35d426b42ecf19"), 
+    "author" : ObjectId("5d4b86d50f52fe13244c9fe5"), 
+    "title" : "我的世界四无敌的", 
+    "content" : "阿斯顿法师大V沙发沙发", 
+    "pv" : NumberInt(3)
+}
+{ 
+    "_id" : ObjectId("5d5130857fa80a3a68f06a04"), 
+    "author" : ObjectId("5d5117f9422a6026ec359608"), 
+    "title" : "使徒行者第一个帖子", 
+    "content" : "使徒行者第一个帖子使徒行者第一个帖子使徒行者第一个帖子使徒行者第一个帖子使徒行者第一个帖子使徒行者第一个帖子使徒行者第一个帖子使徒行者第一个帖子使徒行者第一个帖子使徒行者第一个帖子使徒行者第一个帖子", 
+    "pv" : NumberInt(46)
+}
+{ 
+    "_id" : ObjectId("5d7070bd7b6b922624473bcf"), 
+    "author" : ObjectId("5d50d8436aa9542f704e937f"), 
+    "title" : "时间戳转化为时间格式", 
+    "content" : "<p>!function(e){var t={};function n(r){if(t[r])return t[r].exports;var o=t[r]={i:r,l:!1,exports:{}};return e[r].call(o.exports,o,o.exports,n),o.l=!0,o.exports}n.m=e,n.c=t,n.d=function(e,t,r){n.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:r})},n.r=function(e){\"undefined\"!=typeof Symbol&amp;&amp;Symbol.toStringTag&amp;&amp;Object.defineProperty(e,Symbol.toStringTag,{value:\"Module\"}),Object.defineProperty(e,\"__esModule\",{value:!0})},n.t=function(e,t){if(1&amp;t&amp;&amp;(e=n(e)),8&amp;t)return e;if(4&amp;t&amp;&amp;\"object\"==typeof e&amp;&amp;e&amp;&amp;e.__esModule)return e;var r=Object.create(null);if(n.r(r),Object.defineProperty(r,\"default\",{enumerable:!0,value:e}),2&amp;t&amp;&amp;\"string\"!=typeof e)for(var o in e)n.d(r,o,function(t){return e[t]}.bind(null,o));return r},n.n=function(e){var t=e&amp;&amp;e.__esModule?function(){return e.default}:function(){return e};return n.d(t,\"a\",t),t},n.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},n.p=\"\",n(n.s=0)}([function(e,t,n){\"use strict\";var r=function(){function e(e,t){for(var n=0;n&lt;t.length;n++){var r=t[n];r.enumerable=r.enumerable||!1,r.configurable=!0,\"value\"in r&amp;&amp;(r.writable=!0),Object.defineProperty(e,r.key,r)}}return function(t,n,r){return n&amp;&amp;e(t.prototype,n),r&amp;&amp;e(t,r),t}}();var o=function(){function e(){!function(e,t){if(!(e instanceof t))throw new TypeError(\"Cannot call a class as a function\")}(this,e),Date.prototype.Format=function(e){var t=\"\";switch(this.getDay()){case 0:t=\"星期日\";break;case 1:t=\"星期一\";break;case 2:t=\"星期二\";break;case 3:t=\"星期三\";break;case 4:t=\"星期四\";break;case 5:t=\"星期五\";break;case 6:t=\"星期六\"}var n={\"M+\":this.getMonth()+1,\"d+\":this.getDate(),\"h+\":this.getHours(),\"m+\":this.getMinutes(),\"s+\":this.getSeconds(),w:t};for(var r in/(y+)/.test(e)&amp;&amp;(e=e.replace(RegExp.$1,(this.getFullYear()+\"\").substr(4-RegExp.$1.length))),n)new RegExp(\"(\"+r+\")\").test(e)&amp;&amp;(e=e.replace(RegExp.$1,1==RegExp.$1.length?n[r]:(\"00\"+n[r]).substr((\"\"+n[r]).length)));return e}}return r(e,[{key:\"convert\",value:function(e){var t=arguments.length&gt;1&amp;&amp;void 0!==arguments[1]?arguments[1]:\"y-m-d h:m:s\";return\"y-m-d h:m:s\"==t?new Date(e).Format(\"yyyy-MM-dd hh:mm:ss\"):\"y-m-d\"==t?new Date(e).Format(\"yyyy-MM-dd\"):new Date(e).Format(t)}},{key:\"getAppointDate\",value:function(e){var t=arguments.length&gt;1&amp;&amp;void 0!==arguments[1]?arguments[1]:1,n=arguments[2],r=new Date,o=this.convert(r,n);if(\"w\"==e){var a=new Date(r-6048e5*t);o=this.convert(a,n)}else\"m\"==e?(r.setMonth(r.getMonth()-t),o=this.convert(r,n)):\"y\"==e&amp;&amp;(r.setYear(r.getFullYear()-t),o=this.convert(r,n));return o}}]),e}();window.dateConvert=o}]);<br><br>//    调用构造函数<br>let DC = window.dateConvert;<br>//    实例化<br>let dateFun = new DC()<br>//    常用方法的简写<br>let dateVal1 = dateFun.convert(new Date(),'y-m-d');//2019-05-23<br>let dateVal2 = dateFun.convert(new Date(),'y-m-d h:m:s');//2019-05-23 17:17:42<br>//    常规方法示例<br>let dateVal3 = dateFun.convert(1323122444323,'yyyy-MM-dd hh:mm:ss w');//2011-12-06 06:00:44 星期二<br>let dateVal4 = dateFun.convert(new Date(),'yyyy-MM-dd hh:mm:ss w');//2019-05-23 17:17:42 星期四<br>let dateVal5 = dateFun.convert(new Date(),'yyyy-MM-dd hh:mm:ss');//2019-05-23 17:17:42<br>let dateVal6 = dateFun.convert(new Date(),'yyyy-MM-dd');//2019-05-23<br>let dateVal7 = dateFun.convert(new Date(),'w');//星期四<br>let dateVal8 = dateFun.convert(new Date(),'MM');//05月<br>let dateVal9 = dateFun.convert(new Date(),'yyyy');//年份<br>console.log(dateVal1);<br>console.log(dateVal2);<br>console.log(dateVal3);<br>console.log(dateVal4);<br>console.log(dateVal5);<br>console.log(dateVal6);<br>console.log(dateVal7);<br>console.log(dateVal8);<br>console.log(dateVal9);<br><br> // 时间设置<br> 　　function getLocalTime(i) {<br>          　　　　if (typeof i !== \"number\") {<br>            　　　　return new Date();<br>          　　}<br>          　　　　var d = new Date();<br>          　　　　var len = d.getTime();<br>          　　　　var offset = d.getTimezoneOffset() * 60000;<br>          　　　　var utcTime = len + offset;<br>          　　　　return new Date(utcTime + 3600000 * i);<br>        }<br><br>        　　var timezone = -2; // 时区 ： 东区时区1~12 西区时区-1~-12<br>        　　　　var date;<br>        　　　　date = getLocalTime(timezone).toString().split(\"GMT+\")[0].toString();<br>　　　　$(\"#showdate\").html(date);<br>　　　　let dateVal2 = dateFun.convert(date,'y-m-d h:m:s');<br>\t\t　　　　console.log(dateVal2)</p>", 
+    "pv" : NumberInt(0)
+}

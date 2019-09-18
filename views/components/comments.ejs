@@ -1,42 +1,18 @@
-<div class="ui grid">
-  <div class="four wide column"></div>
-  <div class="eight wide column">
-    <div class="ui segment">
-      <div class="ui minimal comments">
-        <h3 class="ui dividing header">留言</h3>
-
-        <% comments.forEach(function (comment) { %>
-          <div class="comment">
-            <span class="avatar">
-              <img src="/img/<%= comment.author.avatar %>">
-            </span>
-            <div class="content">
-              <a class="author" href="/posts?author=<%= comment.author._id %>"><%= comment.author.name %></a>
-              <div class="metadata">
-                <span class="date"><%= comment.created_at %></span>
-              </div>
-              <div class="text"><%- comment.content %></div>
-
-              <% if (user && comment.author._id && user._id.toString() === comment.author._id.toString()) { %>
-                <div class="actions">
-                  <a class="reply" href="/comments/<%= comment._id %>/remove">删除</a>
-                </div>
-              <% } %>
-            </div>
-          </div>
-        <% }) %>
-
-        <% if (user) { %>
-          <form class="ui reply form" method="post" action="/comments">
-            <input name="postId" value="<%= post._id %>" hidden>
-            <div class="field">
-              <textarea name="content"></textarea>
-            </div>
-            <input type="submit" class="ui icon button" value="留言" />
-          </form>
-        <% } %>
-
-      </div>
+<% comments.forEach(function (comment) { %>
+<li data-id="<%= comment.author._id %>" data-name="<%= comment.author.name %>" class="jieda-daan"> <a name="<%= comment.author.name %>"></a>
+  <div class="detail-about detail-about-reply"> <a class="fly-avatar" href="/posts?author=<%= comment.author._id %>">
+      <img src="/img/<%= comment.author.avatar %>" alt="<%= comment.author.name %>"> </a>
+    <div class="fly-detail-user"> <a href="/posts?author=<%= comment.author._id %>" class="fly-link">
+        <cite><%= comment.author.name %></cite> </a>
     </div>
+    <div class="detail-hits"> <span><%= comment.created_at %></span> </div>
   </div>
-</div>
+  <div class="detail-body layui-text jieda-body photos"><%- comment.content %></div>
+  <div class="jieda-reply">
+    <% if (user && comment.author._id && user._id.toString() === comment.author._id.toString()) { %>
+    <span type="reply"><a class="delete" href="Javascript:void(0)" bind_loction="/comments/<%= comment._id %>/remove">删除</a></span>
+    <% } %>
+    <span class="reply" type="reply">回复</span>
+  </div>
+</li>
+<% }) %>

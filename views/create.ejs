@@ -1,28 +1,85 @@
-<%- include('header') %>
+<%- include('components/header') %>
+<script src="/static/js/wangEditor.min.js"></script>
+<div class="layui-row layui-col-space15">
+  <div class="layui-col-md9">
+    <!-- <div class="ui grid"> -->
+      <!-- <div class="four wide column">
+        <a class="avatar avatar-link" href="/posts?author=<%= user._id %>"
+          data-title="<%= user.name %> | <%= ({m: '男', f: '女', x: '保密'})[user.gender] %>"
+          data-content="<%= user.bio %>">
+          <img class="avatar" src="/img/<%= user.avatar %>">
+        </a>
+      </div> -->
 
-<div class="ui grid">
-  <div class="four wide column">
-    <a class="avatar avatar-link"
-       href="/posts?author=<%= user._id %>"
-       data-title="<%= user.name %> | <%= ({m: '男', f: '女', x: '保密'})[user.gender] %>"
-       data-content="<%= user.bio %>">
-      <img class="avatar" src="/img/<%= user.avatar %>">
-    </a>
-  </div>
-
-  <div class="eight wide column">
-    <form class="ui form segment" method="post">
-      <div class="field required">
-        <label>标题</label>
-        <input type="text" name="title">
+      <div class="eight wide column" style="padding-top: 50px;">
+          <%- include('components/notification') %>
+        <form class="layui-form" method="post">
+          <div class="layui-form-item">
+            <label class="layui-form-label">标题</label>
+            <div class="layui-input-block">
+              <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入标题"
+                class="layui-input">
+            </div>
+          </div>
+          <div class="layui-form-item">
+            <label class="layui-form-label">内容</label>
+            <div class="layui-input-block" id="div3">
+            </div>
+          </div>
+          <div class="layui-form-item">
+            <div class="layui-input-block">
+              <button class="layui-btn" lay-submit="" lay-filter="demo1">立即提交</button>
+            </div>
+          </div>
+        </form>
       </div>
-      <div class="field required">
-        <label>内容</label>
-        <textarea name="content" rows="15"></textarea>
-      </div>
-      <input type="submit" class="ui button" value="发布">
-    </form>
+    <!-- </div> -->
   </div>
 </div>
+<%- include('components/footer') %>
+<script>
+  //富文本编辑器
+  var E = window.wangEditor
+  var editor2 = new E('#div3')
+  editor2.create();
+  layui.use(['form', 'layedit', 'laydate'], function () {
+    var form = layui.form
+      , layer = layui.layer
+      , layedit = layui.layedit
+      , laydate = layui.laydate;
 
-<%- include('footer') %>
+    //自定义验证规则
+    form.verify({
+      title: function (value) {
+        if (value.length < 5) {
+          return '标题至少得5个字符啊';
+        }
+      }
+    });
+
+    //监听提交
+    form.on('submit(demo1)', function (data) {
+     
+      data.field.content = editor2.txt.html();
+      $.ajax({
+        type:'POST',
+        data:data.field,
+        url:'/posts/create',
+        success:function(res){
+          if(res){
+            var res =JSON.parse(res);
+          if(res.code==0){
+            window.location.href="/posts?author=<%= user._id %>"
+          }else{
+            alert(res.msg)
+          }
+          }
+        }
+      })
+      // layer.alert(JSON.stringify(data.field), {
+      //   title: '最终的提交信息'
+      // })
+      return false;
+    });
+  });
+</script>

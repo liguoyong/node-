@@ -1,7 +1,7 @@
-  <%- include('components/header') %>
-  <div class="layui-container">
-    <div class="layui-row layui-col-space15">
-      <div class="layui-col-md8">
+<%- include('components/header') %>
+  <div class="layui-row layui-col-space15">
+    <% if (posts && posts.length>0) { %>
+    <div class="layui-col-md8">
       <ul class="fly-list">
         <% posts.forEach(function (post) { %>
         <%- include('components/post-content', { post: post }) %>
@@ -9,191 +9,47 @@
       </ul>
     </div>
     <div class="layui-col-md4">
-      
     </div>
-      <!-- <div class="layui-tab-item layui-show">
-            <div class="layui-form layui-form-pane">
-              <form method="post" acturl="/reg" id="redirect" class="layui-form" lay-filter="example" redirect="/">
-                <div class="layui-form-item"> <label for="L_email" class="layui-form-label">手机</label>
-                  <div class="layui-input-inline"> <input type="text" id="L_phone" name="phone" required=""
-                      lay-verify="phone" autocomplete="off" class="layui-input"> </div>
-                </div>
-                <div class="layui-form-item"> <label for="L_vercode" class="layui-form-label">图形码</label>
-                  <div class="layui-input-inline"> <input type="text" id="L_imagecode" name="imagecode" required=""
-                      lay-verify="required" autocomplete="off" class="layui-input"> </div>
-                  <div class="layui-form-mid" style="padding: 0!important;"> <span class="vercode"><img src=""
-                        class="fly-imagecode" style="margin-top: 0;"><a href="javascript:void(0)"
-                        class="captcha-handler" style="line-height: 38px; color: #61cc82;">看不清，换一张</a></span> </div>
-                </div>
-                 <div class="layui-form-item"> <label for="L_vercode" class="layui-form-label">验证码</label>
-                  <div class="layui-input-inline"> <input type="text" id="L_vercode" name="vercode" required=""
-                      lay-verify="required" placeholder="请输入手机短信验证码" autocomplete="off" class="layui-input"> </div>
-                  <div class="layui-form-mid" style="padding: 0!important;"> <button type="button"
-                      class="layui-btn layui-btn-normal" id="FLY-getvercode">获取验证码</button> </div>
-                </div> 
-          <div class="layui-form-item">
-            <label for="L_username" class="layui-form-label">昵称</label>
-            <div class="layui-input-inline"> <input type="text" id="L_username" name="username" required=""
-                lay-verify="required|username" autocomplete="off" class="layui-input"> </div>
-            <div class="layui-form-mid layui-word-aux">你在社区的名字</div>
-          </div>
-          <div class="layui-form-item"> <label for="L_pass" class="layui-form-label">密码</label>
-            <div class="layui-input-inline"> <input type="password" id="L_pass" name="pass" required=""
-                lay-verify="required|pass" autocomplete="off" class="layui-input"> </div>
-            <div class="layui-form-mid layui-word-aux">6到16个字符</div>
-          </div>
-          <div class="layui-form-item"> <label for="L_repass" class="layui-form-label">确认密码</label>
-            <div class="layui-input-inline"> <input type="password" id="L_repass" name="repass" required=""
-                lay-verify="required|repass" autocomplete="off" class="layui-input"> </div>
-          </div>
-          <div class="layui-form-item" style="position: relative; left: -10px; height: 32px;"> <input type="checkbox"
-              name="agreement" lay-skin="primary" title="" checked="">
-            <div class="layui-unselect layui-form-checkbox layui-form-checked" lay-skin="primary"><i
-                class="layui-icon layui-icon-ok"></i></div> <a href="/instructions/terms.html" target="_blank"
-              style="position: relative; top: 4px; left: 5px; color: #999;">同意用户服务条款</a>
-          </div>
-          <div class="layui-form-item"> <button class="layui-btn" lay-filter="demo1" lay-submit="">立即注册</button>
-          </div>
-          <div class="layui-form-item fly-form-app"> <span>或者直接使用社交账号快捷注册</span> <a href="/app/qq"
-              onclick="layer.msg('正在通过QQ登入', {icon:16, shade: 0.1, time:0})" class="iconfont icon-qq" title="QQ登入"></a>
-            <a href="/app/weibo/" onclick="layer.msg('正在通过微博登入', {icon:16, shade: 0.1, time:0})"
-              class="iconfont icon-weibo" title="微博登入"></a> </div>
-          </form>
-        </div>
-      </div> -->
+    <% } else { %>
+    <% if (user) { %>
+    <div class="fly-home fly-panel" style="background-image: url();"> <img src="/img/<%= user.avatar %>" alt="一訫丶卟二">
+      <h1><%= user.name %> <i class="iconfont icon-nan"></i> </h1>
+      <p class="fly-home-info"> <i class="iconfont icon-kiss" title="飞吻"></i><span style="color: #FF7200;">20飞吻</span>
+        <i class="iconfont icon-shijian"></i><span>2019-7-31 加入</span> <i
+          class="iconfont icon-chengshi"></i><span>来自深圳</span> </p>
+      <p class="fly-home-sign">（<%= user.bio %>）</p>
     </div>
-  </div>
+    <div class="layui-container" style="height: 400px;text-align: center;">
+      <div class="layui-row layui-col-space15">
+        <p>数据暂无</p>
+      </div>
+    </div>
+    <% } %>
+    <% } %>
 
   </div>
-  <div class="fly-footer">
-    <p><a href="" target="_blank">Fly社区</a> 2017 &copy; <a href="http://www.layui.com/" target="_blank">layui.com 出品</a>
-    </p>
-    <p>
-      <a href="" target="_blank">付费计划</a>
-      <a href="" target="_blank">获取Fly社区模版</a>
-      <a href="" target="_blank">微信公众号</a>
-    </p>
-  </div>
 
-  <script src="/static/js/layui.js"></script>
-  <!-- <script src="/common/jquery.js"></script> -->
-  <!-- <script src="/common/base64.js"></script> -->
-  <!-- <script>
-    var ip =''
-    jQuery.getScript(
-    "http://pv.sohu.com/cityjson?ie=utf-8",function(data){  
-    //localIP = returnCitySN["cip"];
-    console.log(returnCitySN);
-          ip = returnCitySN;
-          $('.vercode img').attr('src', "/captcha?t=" + Math.random() + 1125000+'&ip='+ip.cip);
-          $('[name="imagecode"]').attr('ip',ip.cip);
+</div>
+<div class="fly-footer">
+  <p><a href="" target="_blank">Fly社区</a> 2017 &copy; <a href="http://www.layui.com/" target="_blank">layui.com 出品</a>
+  </p>
+  <p>
+    <a href="" target="_blank">付费计划</a>
+    <a href="" target="_blank">获取Fly社区模版</a>
+    <a href="" target="_blank">微信公众号</a>
+  </p>
+</div>
+
+<%- include('components/footer') %>
+<script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+<script>
+  layui.use(['element', 'layer'], function () {
+    var element = layui.element;
+    var layer = layui.layer;
+    //监听折叠
+    element.on('collapse(test)', function (data) {
+      layer.msg('展开状态：' + data.show);
     });
-    (function (old) {
-      $.fn.attr = function () {
-        if (arguments.length === 0) {
-          if (this.length === 0) {
-            return null;
-          }
-
-          var obj = {};
-          $.each(this[0].attributes, function () {
-            if (this.specified) {
-              obj[this.name] = this.value;
-            }
-          });
-          return obj;
-        }
-
-        return old.apply(this, arguments);
-      };
-    })($.fn.attr);
-
-    layui.cache.page = 'user';
-    layui.cache.user = {
-      username: '游客'
-      , uid: -1
-      , avatar: '../../res/images/avatar/00.jpg'
-      , experience: 83
-      , sex: '男'
-    };
-    layui.config({
-      version: "3.0.0"
-      , base: '../../res/mods/'
-    }).extend({
-      fly: 'index'
-    }).use('fly');
-    layui.use('form', function () {
-      var form = layui.form;
-      //监听提交
-      //监听提交
-      form.verify({
-        username: function (value, item) { //value：表单的值、item：表单的DOM对象
-          if (!new RegExp("^[a-zA-Z0-9_\u4e00-\u9fa5\\s·]+$").test(value)) {
-            return '用户名不能有特殊字符';
-          }
-          if (/(^\_)|(\__)|(\_+$)/.test(value)) {
-            return '用户名首尾不能出现下划线\'_\'';
-          }
-          if (/^\d+\d+\d$/.test(value)) {
-            return '用户名不能全为数字';
-          }
-        }
-
-        //我们既支持上述函数式的方式，也支持下述数组的形式
-        //数组的两个值分别代表：[正则匹配、匹配不符时的提示文字]
-        , pass: [
-          /^[\S]{6,12}$/
-          , '密码必须6到12位，且不能出现空格'
-        ],
-        repass:function(value, item){
-          if($('input[name="pass"]').val()&&$('input[name="pass"]').val()!=value){
-            return '两次密码输入不一致'
-          }
-
-        }
-      });
-      form.on('submit(demo1)', function (data) {
-        var from_attr = $('#redirect').attr();
-        console.log(from_attr)
-        data.field.ip =$('[name="imagecode"]').attr('ip');
-        if (data.field.pass != data.field.repass) {
-          // layer.msg('两次密码输入不一致', { icon: 5 });
-          console.log("asd")
-        } else {
-          register(from_attr, data.field);
-        }
-        return false;
-      });
-    });
-    function register(from_attr, data) {
-      $.ajax({
-        type: from_attr.method || "POST",
-        url: from_attr.acturl,
-        data: data || {},
-        success: function (res) {
-          var res = JSON.parse(res);
-          console.log(res, "1212");
-          if (res.code == 0) {
-
-            // window.location = "/";
-          }else {
-            layer.msg(res.message,{ icon: 5 });
-          }
-        },
-        error: function (res) {
-          layer.msg(res.code + res.message);
-        }
-      })
-    }
-    $('.vercode').click(function () {
-      $('.vercode img').attr('src', "/captcha?t=" + Math.random() + 1125000+'&ip='+ip.cip);
-    })
-    console.log(Base64)
-    var b = new Base64();
-    var str = b.encode("admin:admin");
-    console.log(str)
-  </script> -->
-
-</body>
-
-</html>
+  });
+  // alert(returnCitySN['cip'] + returnCitySN['cname']);
+</script>

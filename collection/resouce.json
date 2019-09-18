@@ -1,0 +1,727 @@
+{ 
+    "_id" : ObjectId("5d78a0d6ef1a733a5cb84dbc"), 
+    "souceId" : "67787", 
+    "chapterName" : "超级学校霸王国语/粤语", 
+    "chapterUrl" : "/?m=vod-detail-id-67787.html", 
+    "chapterType" : "动作片", 
+    "chapterUpdate" : "2019-09-11", 
+    "address" : {
+        "image" : "https://img.tupian-zuida.com/pic/upload/vod/2019-09-11/201909111568172274.jpg", 
+        "name" : "超级学校霸王", 
+        "zuidam3u8" : "http://yi.jingdianzuida.com/20190910/O8gCyNAO/index.m3u8", 
+        "zuidall" : "http://yi.jingdianzuida.com/share/Kr5esVkHiY8vRSfM"
+    }
+}
+{ 
+    "_id" : ObjectId("5d78a0d6ef1a733a5cb84dbd"), 
+    "souceId" : "67781", 
+    "chapterName" : "得闲饮茶BD国语超清", 
+    "chapterUrl" : "/?m=vod-detail-id-67781.html", 
+    "chapterType" : "喜剧片", 
+    "chapterUpdate" : "2019-09-11", 
+    "address" : {
+        "image" : "https://img.tupian-zuida.com/pic/upload/vod/2019-09-11/201909111568170410.jpg", 
+        "name" : "得闲饮茶", 
+        "zuidam3u8" : "http://yi.jingdianzuida.com/20190910/I3HkBqFl/index.m3u8", 
+        "zuidall" : "http://yi.jingdianzuida.com/share/WvPemEvcslYDiq0L"
+    }
+}
+{ 
+    "_id" : ObjectId("5d78a0d6ef1a733a5cb84dbe"), 
+    "souceId" : "67702", 
+    "chapterName" : "笑太极BD国语超清", 
+    "chapterUrl" : "/?m=vod-detail-id-67702.html", 
+    "chapterType" : "喜剧片", 
+    "chapterUpdate" : "2019-09-10", 
+    "address" : {
+        "image" : "https://img.tupian-zuida.com/pic/upload/vod/2019-09-10/201909101568100267.jpg", 
+        "name" : "笑太极", 
+        "zuidam3u8" : "http://yi.jingdianzuida.com/20190908/I2v6tpkW/index.m3u8", 
+        "zuidall" : "http://yi.jingdianzuida.com/share/K9LO6FHAG8Wza1ny", 
+        "迅雷下载" : "http://xiazai.vpszuida.com/20190909/326_2247c9c6/《笑太极》（国语高清）.mp4"
+    }
+}
+{ 
+    "_id" : ObjectId("5d78a0d6ef1a733a5cb84dbf"), 
+    "souceId" : "67789", 
+    "chapterName" : "大明诡事录HD1280高清国语中字版", 
+    "chapterUrl" : "/?m=vod-detail-id-67789.html", 
+    "chapterType" : "剧情片", 
+    "chapterUpdate" : "2019-09-11", 
+    "address" : {
+        "image" : "https://img.tupian-zuida.com/pic/upload/vod/2019-09-11/201909111568175182.jpg", 
+        "name" : "大明诡事录", 
+        "zuidam3u8" : "http://wuji.zhulong-zuida.com/20190911/7952_2dbf0aa8/index.m3u8", 
+        "zuidall" : "http://wuji.zhulong-zuida.com/share/f316e3fe33f1f754851712c760ab9d48", 
+        "迅雷下载" : "http://zuida.downzuida.com/1909/大明诡事录.HD1280高清国语中字版.mp4"
+    }
+}
+{ 
+    "_id" : ObjectId("5d78a0d6ef1a733a5cb84dc0"), 
+    "souceId" : "67780", 
+    "chapterName" : "他乡的童年[纪录片]更新到03集", 
+    "chapterUrl" : "/?m=vod-detail-id-67780.html", 
+    "chapterType" : "记录片", 
+    "chapterUpdate" : "2019-09-11", 
+    "address" : {
+        "image" : "https://img.tupian-zuida.com/pic/upload/vod/2019-09-11/201909111568170322.jpg", 
+        "name" : "他乡的童年[纪录片]", 
+        "zuidam3u8" : "http://wuji.zhulong-zuida.com/20190911/7944_9644ae40/index.m3u8", 
+        "zuidall" : "http://wuji.zhulong-zuida.com/share/0aed23da2775d1ffec4e951b99f3cca8", 
+        "迅雷下载" : "http://zuida.downzuida.com/1909/他乡的童年[纪录片]-01.mp4"
+    }
+}
+{ 
+    "_id" : ObjectId("5d78a0d6ef1a733a5cb84dc1"), 
+    "souceId" : "67709", 
+    "chapterName" : "高压线国语中字超清", 
+    "chapterUrl" : "/?m=vod-detail-id-67709.html", 
+    "chapterType" : "动作片", 
+    "chapterUpdate" : "2019-09-10", 
+    "address" : {
+        "image" : "https://img.tupian-zuida.com/pic/upload/vod/2019-09-10/201909101568100849.jpg", 
+        "name" : "高压线", 
+        "zuidam3u8" : "http://yi.jingdianzuida.com/20190908/NutIdrSp/index.m3u8", 
+        "zuidall" : "http://yi.jingdianzuida.com/share/qEMEmug3pv9DfdFL", 
+        "迅雷下载" : "http://xiazai.vpszuida.com/20190909/321_70346595/[高压线]国语中字_超清.mp4"
+    }
+}
+{ 
+    "_id" : ObjectId("5d78a0d6ef1a733a5cb84dc2"), 
+    "souceId" : "67704", 
+    "chapterName" : "怒火威龙BD国语超清", 
+    "chapterUrl" : "/?m=vod-detail-id-67704.html", 
+    "chapterType" : "动作片", 
+    "chapterUpdate" : "2019-09-10", 
+    "address" : {
+        "image" : "https://img.tupian-zuida.com/pic/upload/vod/2019-09-10/201909101568100454.jpg", 
+        "name" : "怒火威龙", 
+        "zuidam3u8" : "http://yi.jingdianzuida.com/20190908/wNcoN15i/index.m3u8", 
+        "zuidall" : "http://yi.jingdianzuida.com/share/hO7XMpBIWNTwZxBW", 
+        "迅雷下载" : "http://xiazai.vpszuida.com/20190909/324_2c09c131/《怒火威龙》国语超高清.mp4"
+    }
+}
+{ 
+    "_id" : ObjectId("5d78a0d6ef1a733a5cb84dc3"), 
+    "souceId" : "67691", 
+    "chapterName" : "关云长BD国语超清", 
+    "chapterUrl" : "/?m=vod-detail-id-67691.html", 
+    "chapterType" : "动作片", 
+    "chapterUpdate" : "2019-09-10", 
+    "address" : {
+        "image" : "https://img.tupian-zuida.com/pic/upload/vod/2019-09-10/201909101568087950.jpg", 
+        "name" : "关云长", 
+        "zuidam3u8" : "http://yi.jingdianzuida.com/20190908/CckrjAnE/index.m3u8", 
+        "zuidall" : "http://yi.jingdianzuida.com/share/brYe3lPFQP2HStR8", 
+        "迅雷下载" : "http://xiazai.vpszuida.com/20190909/333_94ef0ba1/关云长-国语720P.mp4"
+    }
+}
+{ 
+    "_id" : ObjectId("5d78a0d6ef1a733a5cb84dc4"), 
+    "souceId" : "67783", 
+    "chapterName" : "大块头有大智慧BD国语超清", 
+    "chapterUrl" : "/?m=vod-detail-id-67783.html", 
+    "chapterType" : "剧情片", 
+    "chapterUpdate" : "2019-09-11", 
+    "address" : {
+        "image" : "https://img.tupian-zuida.com/pic/upload/vod/2019-09-11/201909111568171165.jpg", 
+        "name" : "大块头有大智慧", 
+        "zuidam3u8" : "http://yi.jingdianzuida.com/20190910/fqC6aoWF/index.m3u8", 
+        "zuidall" : "http://yi.jingdianzuida.com/share/XY4cZ1aQzsHqbRHJ"
+    }
+}
+{ 
+    "_id" : ObjectId("5d78a0d6ef1a733a5cb84dc5"), 
+    "souceId" : "67785", 
+    "chapterName" : "冲击天子门生BD国语超清", 
+    "chapterUrl" : "/?m=vod-detail-id-67785.html", 
+    "chapterType" : "动作片", 
+    "chapterUpdate" : "2019-09-11", 
+    "address" : {
+        "image" : "https://img.tupian-zuida.com/pic/upload/vod/2019-09-11/201909111568171747.jpg", 
+        "name" : "冲击天子门生", 
+        "zuidam3u8" : "http://yi.jingdianzuida.com/20190910/UZPgNtac/index.m3u8", 
+        "zuidall" : "http://yi.jingdianzuida.com/share/enzvF6UdXwHTC3V1"
+    }
+}
+{ 
+    "_id" : ObjectId("5d78a0d6ef1a733a5cb84dc6"), 
+    "souceId" : "67777", 
+    "chapterName" : "圣女HD1280高清中英双字版", 
+    "chapterUrl" : "/?m=vod-detail-id-67777.html", 
+    "chapterType" : "喜剧片", 
+    "chapterUpdate" : "2019-09-11", 
+    "address" : {
+        "image" : "https://img.tupian-zuida.com/pic/upload/vod/2019-09-11/201909111568164156.jpg", 
+        "name" : "圣女", 
+        "zuidam3u8" : "http://wuji.zhulong-zuida.com/20190911/7936_5e073918/index.m3u8", 
+        "zuidall" : "http://wuji.zhulong-zuida.com/share/e48a900a95c8e0a3db31da9fbad6866e", 
+        "迅雷下载" : "http://zuida.downzuida.com/1909/圣女.HD1280高清中英双字版.mp4"
+    }
+}
+{ 
+    "_id" : ObjectId("5d78a0d6ef1a733a5cb84dc7"), 
+    "souceId" : "67786", 
+    "chapterName" : "辣舞姐妹HD1280高清中英双字版", 
+    "chapterUrl" : "/?m=vod-detail-id-67786.html", 
+    "chapterType" : "喜剧片", 
+    "chapterUpdate" : "2019-09-11", 
+    "address" : {
+        "image" : "https://img.tupian-zuida.com/pic/upload/vod/2019-09-11/201909111568172125.jpg", 
+        "name" : "辣舞姐妹", 
+        "zuidam3u8" : "http://bili.meijuzuida.com/20190910/21393_e21791ac/index.m3u8", 
+        "zuidall" : "http://bili.meijuzuida.com/share/27952e90aad62b895d7bf8b36405a994", 
+        "迅雷下载" : "http://zuida.downzuida.com/1909/辣舞姐妹.HD1280高清中英双字版.mp4"
+    }
+}
+{ 
+    "_id" : ObjectId("5d78a0d6ef1a733a5cb84dc8"), 
+    "souceId" : "67784", 
+    "chapterName" : "川岛芳子国语/粤语", 
+    "chapterUrl" : "/?m=vod-detail-id-67784.html", 
+    "chapterType" : "剧情片", 
+    "chapterUpdate" : "2019-09-11", 
+    "address" : {
+        "image" : "https://img.tupian-zuida.com/pic/upload/vod/2019-09-11/201909111568171526.jpg", 
+        "name" : "川岛芳子", 
+        "zuidam3u8" : "http://yi.jingdianzuida.com/20190910/9dahsmkQ/index.m3u8", 
+        "zuidall" : "http://yi.jingdianzuida.com/share/rOQqu1jyHyzIDi2l"
+    }
+}
+{ 
+    "_id" : ObjectId("5d78a0d6ef1a733a5cb84dc9"), 
+    "souceId" : "67703", 
+    "chapterName" : "少年黄飞鸿之铁马骝BD国语超清", 
+    "chapterUrl" : "/?m=vod-detail-id-67703.html", 
+    "chapterType" : "喜剧片", 
+    "chapterUpdate" : "2019-09-10", 
+    "address" : {
+        "image" : "https://img.tupian-zuida.com/pic/upload/vod/2019-09-10/201909101568100363.jpg", 
+        "name" : "少年黄飞鸿之铁马骝", 
+        "zuidam3u8" : "http://yi.jingdianzuida.com/20190908/gQUzKoq9/index.m3u8", 
+        "zuidall" : "http://yi.jingdianzuida.com/share/IvYB0OUYf2GC8gZJ", 
+        "迅雷下载" : "http://xiazai.vpszuida.com/20190909/325_ddad6763/《少年黄飞鸿之铁马骝》国语高清.mp4"
+    }
+}
+{ 
+    "_id" : ObjectId("5d78a0d6ef1a733a5cb84dca"), 
+    "souceId" : "67779", 
+    "chapterName" : "第一茧国语/粤语", 
+    "chapterUrl" : "/?m=vod-detail-id-67779.html", 
+    "chapterType" : "剧情片", 
+    "chapterUpdate" : "2019-09-11", 
+    "address" : {
+        "image" : "https://img.tupian-zuida.com/pic/upload/vod/2019-09-11/201909111568169652.jpg", 
+        "name" : "第一茧", 
+        "zuidam3u8" : "http://yi.jingdianzuida.com/20190910/nQo8n0KU/index.m3u8", 
+        "zuidall" : "http://yi.jingdianzuida.com/share/3N4CNuO7MEdK6DTA"
+    }
+}
+{ 
+    "_id" : ObjectId("5d78a0d6ef1a733a5cb84dcb"), 
+    "souceId" : "67708", 
+    "chapterName" : "黑玫瑰义结金兰DVD国语", 
+    "chapterUrl" : "/?m=vod-detail-id-67708.html", 
+    "chapterType" : "喜剧片", 
+    "chapterUpdate" : "2019-09-10", 
+    "address" : {
+        "image" : "https://img.tupian-zuida.com/pic/upload/vod/2019-09-10/201909101568100771.jpg", 
+        "name" : "黑玫瑰义结金兰", 
+        "zuidam3u8" : "http://yi.jingdianzuida.com/20190908/bKqmbGcp/index.m3u8", 
+        "zuidall" : "http://yi.jingdianzuida.com/share/JVHf464u1d9hhlaM", 
+        "迅雷下载" : "http://xiazai.vpszuida.com/20190909/322_edb56ffc/《黑玫瑰义结金兰》DVD国语.mp4"
+    }
+}
+{ 
+    "_id" : ObjectId("5d78a0d6ef1a733a5cb84dcc"), 
+    "souceId" : "67684", 
+    "chapterName" : "猎豹行动国语1080P", 
+    "chapterUrl" : "/?m=vod-detail-id-67684.html", 
+    "chapterType" : "动作片", 
+    "chapterUpdate" : "2019-09-10", 
+    "address" : {
+        "image" : "https://img.tupian-zuida.com/pic/upload/vod/2019-09-10/201909101568087408.jpg", 
+        "name" : "猎豹行动", 
+        "zuidam3u8" : "http://yi.jingdianzuida.com/20190908/jTry8kCg/index.m3u8", 
+        "zuidall" : "http://yi.jingdianzuida.com/share/KjiIGgjT6NSqcdSw", 
+        "迅雷下载" : "http://xiazai.vpszuida.com/20190909/340_56df7b6a/猎豹行动【国语1080P】.mp4"
+    }
+}
+{ 
+    "_id" : ObjectId("5d78a0d6ef1a733a5cb84dcd"), 
+    "souceId" : "67678", 
+    "chapterName" : "杀杀��、跳跳舞HD国语", 
+    "chapterUrl" : "/?m=vod-detail-id-67678.html", 
+    "chapterType" : "剧情片", 
+    "chapterUpdate" : "2019-09-10", 
+    "address" : {
+        "image" : "https://img.tupian-zuida.com/pic/upload/vod/2019-09-10/201909101568084584.jpg", 
+        "name" : "杀杀人、跳跳舞", 
+        "zuidam3u8" : "http://yi.jingdianzuida.com/20190908/SaTku6nM/index.m3u8", 
+        "zuidall" : "http://yi.jingdianzuida.com/share/Gc4KpVNA1O3rw3Ef", 
+        "迅雷下载" : "http://xiazai.vpszuida.com/20190909/346_6f1dc144/杀杀人，跳跳舞.1998HD国语.mp4"
+    }
+}
+{ 
+    "_id" : ObjectId("5d78a0d6ef1a733a5cb84dce"), 
+    "souceId" : "67707", 
+    "chapterName" : "诡心墨HD1280高清国语中字版", 
+    "chapterUrl" : "/?m=vod-detail-id-67707.html", 
+    "chapterType" : "剧情片", 
+    "chapterUpdate" : "2019-09-10", 
+    "address" : {
+        "image" : "https://img.tupian-zuida.com/pic/upload/vod/2019-09-10/201909101568100717.jpg", 
+        "name" : "诡心墨", 
+        "zuidam3u8" : "http://feifei.feifeizuida.com/20190910/17706_cb334a9b/index.m3u8", 
+        "zuidall" : "http://feifei.feifeizuida.com/share/824c121add38289730a196fff2102e1d", 
+        "迅雷下载" : "http://down.phpzuida.com/1909/诡心墨.HD1280高清国语中字版.mp4"
+    }
+}
+{ 
+    "_id" : ObjectId("5d78a0d6ef1a733a5cb84dcf"), 
+    "souceId" : "67694", 
+    "chapterName" : "冰封：重生之门国语/粤语", 
+    "chapterUrl" : "/?m=vod-detail-id-67694.html", 
+    "chapterType" : "喜剧片", 
+    "chapterUpdate" : "2019-09-10", 
+    "address" : {
+        "image" : "https://img.tupian-zuida.com/pic/upload/vod/2019-09-10/201909101568088389.jpg", 
+        "name" : "冰封：重生之门", 
+        "zuidam3u8" : "http://yi.jingdianzuida.com/20190908/7BojGvtP/index.m3u8", 
+        "zuidall" : "http://yi.jingdianzuida.com/share/AFWq5qUSx0ciQZME", 
+        "迅雷下载" : "http://xiazai.vpszuida.com/20190909/374_ce9ffcdb/冰封：重生之门(粤语版) 超清.mp4"
+    }
+}
+{ 
+    "_id" : ObjectId("5d78a0d6ef1a733a5cb84dd0"), 
+    "souceId" : "67788", 
+    "chapterName" : "飙城BD国语超清", 
+    "chapterUrl" : "/?m=vod-detail-id-67788.html", 
+    "chapterType" : "剧情片", 
+    "chapterUpdate" : "2019-09-11", 
+    "address" : {
+        "image" : "https://img.tupian-zuida.com/pic/upload/vod/2019-09-11/201909111568172537.jpg", 
+        "name" : "飙城", 
+        "zuidam3u8" : "http://yi.jingdianzuida.com/20190910/Zb8SE82U/index.m3u8", 
+        "zuidall" : "http://yi.jingdianzuida.com/share/gVZ3Ter8fPlHHV02"
+    }
+}
+{ 
+    "_id" : ObjectId("5d78a0d6ef1a733a5cb84dd1"), 
+    "souceId" : "67689", 
+    "chapterName" : "皇家师姐4：直击证人BD国语超清", 
+    "chapterUrl" : "/?m=vod-detail-id-67689.html", 
+    "chapterType" : "动作片", 
+    "chapterUpdate" : "2019-09-10", 
+    "address" : {
+        "image" : "https://img.tupian-zuida.com/pic/upload/vod/2019-09-10/201909101568087753.jpg", 
+        "name" : "皇家师姐4：直击证人", 
+        "zuidam3u8" : "http://yi.jingdianzuida.com/20190908/49SnqMT4/index.m3u8", 
+        "zuidall" : "http://yi.jingdianzuida.com/share/A2y5LziORVoeVYi7", 
+        "迅雷下载" : "http://xiazai.vpszuida.com/20190909/376_236dffd2/皇家师姐4直击证人 超清.mp4"
+    }
+}
+{ 
+    "_id" : ObjectId("5d78a0d6ef1a733a5cb84dd2"), 
+    "souceId" : "67717", 
+    "chapterName" : "三年HD1280高清国语中字版", 
+    "chapterUrl" : "/?m=vod-detail-id-67717.html", 
+    "chapterType" : "剧情片", 
+    "chapterUpdate" : "2019-09-10", 
+    "address" : {
+        "image" : "https://img.tupian-zuida.com/pic/upload/vod/2019-09-10/201909101568101637.jpg", 
+        "name" : "三年", 
+        "zuidam3u8" : "http://wuji.zhulong-zuida.com/20190910/7888_67cbd5e0/index.m3u8", 
+        "zuidall" : "http://wuji.zhulong-zuida.com/share/112e9d677c7483747f216a1470bed734", 
+        "迅雷下载" : "http://down.phpzuida.com/1909/三年.HD1280高清国语中字版.mp4"
+    }
+}
+{ 
+    "_id" : ObjectId("5d78a0d6ef1a733a5cb84dd3"), 
+    "souceId" : "67688", 
+    "chapterName" : "黄飞鸿之二：男儿当自强BD国语超清", 
+    "chapterUrl" : "/?m=vod-detail-id-67688.html", 
+    "chapterType" : "动作片", 
+    "chapterUpdate" : "2019-09-10", 
+    "address" : {
+        "image" : "https://img.tupian-zuida.com/pic/upload/vod/2019-09-10/201909101568087652.jpg", 
+        "name" : "黄飞鸿之二：男儿当自强", 
+        "zuidam3u8" : "http://yi.jingdianzuida.com/20190908/7QsHBFzO/index.m3u8", 
+        "zuidall" : "http://yi.jingdianzuida.com/share/97QZuelbgfAVgJWV", 
+        "迅雷下载" : "http://xiazai.vpszuida.com/20190909/337_df0aee75/黄飞鸿之二：男儿当自强-国语720P.mp4"
+    }
+}
+{ 
+    "_id" : ObjectId("5d78a0d6ef1a733a5cb84dd4"), 
+    "souceId" : "48940", 
+    "chapterName" : "花宵道中BD1280高清中字版", 
+    "chapterUrl" : "/?m=vod-detail-id-48940.html", 
+    "chapterType" : "爱情片", 
+    "chapterUpdate" : "2019-09-10", 
+    "address" : {
+        "image" : "https://img.tupian-zuida.com/pic/upload/vod/2018-05-22/201805221526976706.jpg", 
+        "name" : "花宵道中", 
+        "zuidam3u8" : "https://cn2.zuidadianying.com/20180522/8Ni0uO9G/index.m3u8", 
+        "zuidall" : "http://cn2.zuidadianying.com/share/uUBazdshhlchxZLR", 
+        "迅雷下载" : "http://xunleib.zuida360.com/1805/花xd中.BD1280高清中字版.mp4"
+    }
+}
+{ 
+    "_id" : ObjectId("5d78a0d6ef1a733a5cb84dd5"), 
+    "souceId" : "67675", 
+    "chapterName" : "苏乞儿BD国语超清", 
+    "chapterUrl" : "/?m=vod-detail-id-67675.html", 
+    "chapterType" : "剧情片", 
+    "chapterUpdate" : "2019-09-10", 
+    "address" : {
+        "image" : "https://img.tupian-zuida.com/pic/upload/vod/2019-09-10/201909101568084313.jpg", 
+        "name" : "苏乞儿", 
+        "zuidam3u8" : "http://yi.jingdianzuida.com/20190908/NJlYIpAY/index.m3u8", 
+        "zuidall" : "http://yi.jingdianzuida.com/share/QniSv0bDS73dyiNb", 
+        "迅雷下载" : "http://xiazai.vpszuida.com/20190909/350_f1e6c12f/苏乞儿_高清.mp4"
+    }
+}
+{ 
+    "_id" : ObjectId("5d78a0d6ef1a733a5cb84dd6"), 
+    "souceId" : "67199", 
+    "chapterName" : "闪亮的名字第二季更新到05集", 
+    "chapterUrl" : "/?m=vod-detail-id-67199.html", 
+    "chapterType" : "记录片", 
+    "chapterUpdate" : "2019-09-11", 
+    "address" : {
+        "image" : "https://img.tupian-zuida.com/pic/upload/vod/2019-09-04/201909041567572211.jpg", 
+        "name" : "闪亮的名字第二季", 
+        "zuidam3u8" : "http://wuji.zhulong-zuida.com/20190904/7374_be844c0a/index.m3u8", 
+        "zuidall" : "http://wuji.zhulong-zuida.com/share/016669d2649ea531365419cc792ef8bc", 
+        "迅雷下载" : "http://zuida.downzuida.com/1909/闪亮的名字第二季-01.mp4"
+    }
+}
+{ 
+    "_id" : ObjectId("5d78a0d6ef1a733a5cb84dd7"), 
+    "souceId" : "67776", 
+    "chapterName" : "比尔·伯尔：纸老虎HD1280高清中字版", 
+    "chapterUrl" : "/?m=vod-detail-id-67776.html", 
+    "chapterType" : "剧情片", 
+    "chapterUpdate" : "2019-09-11", 
+    "address" : {
+        "image" : "https://img.tupian-zuida.com/pic/upload/vod/2019-09-11/201909111568163414.jpg", 
+        "name" : "比尔·伯尔：纸老虎", 
+        "zuidam3u8" : "http://wuji.zhulong-zuida.com/20190911/7931_c013ade6/index.m3u8", 
+        "zuidall" : "http://wuji.zhulong-zuida.com/share/36dcd524971019336af02550264b8a08", 
+        "迅雷下载" : "http://zuida.downzuida.com/1909/比尔伯尔：纸老虎.HD1280高清中字版.mp4"
+    }
+}
+{ 
+    "_id" : ObjectId("5d78a0d6ef1a733a5cb84dd8"), 
+    "souceId" : "67695", 
+    "chapterName" : "八星抱喜BD国语超清", 
+    "chapterUrl" : "/?m=vod-detail-id-67695.html", 
+    "chapterType" : "喜剧片", 
+    "chapterUpdate" : "2019-09-10", 
+    "address" : {
+        "image" : "https://img.tupian-zuida.com/pic/upload/vod/2019-09-10/201909101568088418.jpg", 
+        "name" : "八星抱喜", 
+        "zuidam3u8" : "http://yi.jingdianzuida.com/20190908/HZoVfozj/index.m3u8", 
+        "zuidall" : "http://yi.jingdianzuida.com/share/1EdaZgKMeNlDSYkp", 
+        "迅雷下载" : "http://xiazai.vpszuida.com/20190909/372_e6f0785e/八星抱喜 超清.mp4"
+    }
+}
+{ 
+    "_id" : ObjectId("5d78a0d6ef1a733a5cb84dd9"), 
+    "souceId" : "67696", 
+    "chapterName" : "666魔鬼复活高清粤语中字", 
+    "chapterUrl" : "/?m=vod-detail-id-67696.html", 
+    "chapterType" : "动作片", 
+    "chapterUpdate" : "2019-09-10", 
+    "address" : {
+        "image" : "https://img.tupian-zuida.com/pic/upload/vod/2019-09-10/201909101568088493.jpg", 
+        "name" : "666魔鬼复活", 
+        "zuidam3u8" : "http://yi.jingdianzuida.com/20190908/ibYbPJFW/index.m3u8", 
+        "zuidall" : "http://yi.jingdianzuida.com/share/HBKYuvuikuen2lGG", 
+        "迅雷下载" : "http://xiazai.vpszuida.com/20190909/327_00b1a82c/666魔鬼复活 1996 高清粤语中字.mp4"
+    }
+}
+{ 
+    "_id" : ObjectId("5d78a0d6ef1a733a5cb84dda"), 
+    "souceId" : "67714", 
+    "chapterName" : "鬼娃回魂HD1280高清中英双字版", 
+    "chapterUrl" : "/?m=vod-detail-id-67714.html", 
+    "chapterType" : "恐怖片", 
+    "chapterUpdate" : "2019-09-10", 
+    "address" : {
+        "image" : "https://img.tupian-zuida.com/pic/upload/vod/2019-09-10/201909101568101123.jpg", 
+        "name" : "鬼娃回魂", 
+        "zuidam3u8" : "http://bili.meijuzuida.com/20190910/21390_d96ade49/index.m3u8", 
+        "zuidall" : "http://bili.meijuzuida.com/share/adf21078378b5c29d76423f457256e9d", 
+        "迅雷下载" : "http://down.phpzuida.com/1909/鬼W回H.HD1080高清中英双字版.mp4"
+    }
+}
+{ 
+    "_id" : ObjectId("5d78a0d6ef1a733a5cb84ddb"), 
+    "souceId" : "67782", 
+    "chapterName" : "刀剑笑HD粤语中字", 
+    "chapterUrl" : "/?m=vod-detail-id-67782.html", 
+    "chapterType" : "喜剧片", 
+    "chapterUpdate" : "2019-09-11", 
+    "address" : {
+        "image" : "https://img.tupian-zuida.com/pic/upload/vod/2019-09-11/201909111568170958.jpg", 
+        "name" : "刀剑笑", 
+        "zuidam3u8" : "http://yi.jingdianzuida.com/20190910/RxySQwT2/index.m3u8", 
+        "zuidall" : "http://yi.jingdianzuida.com/share/uGtR0q6xH6PyrmIv"
+    }
+}
+{ 
+    "_id" : ObjectId("5d78a0d6ef1a733a5cb84ddc"), 
+    "souceId" : "67690", 
+    "chapterName" : "画皮BD国语超清", 
+    "chapterUrl" : "/?m=vod-detail-id-67690.html", 
+    "chapterType" : "剧情片", 
+    "chapterUpdate" : "2019-09-10", 
+    "address" : {
+        "image" : "https://img.tupian-zuida.com/pic/upload/vod/2019-09-10/201909101568087919.jpg", 
+        "name" : "画皮", 
+        "zuidam3u8" : "http://yi.jingdianzuida.com/20190908/m0SFvWD3/index.m3u8", 
+        "zuidall" : "http://yi.jingdianzuida.com/share/7ndg99qycH88I38d", 
+        "迅雷下载" : "http://xiazai.vpszuida.com/20190909/375_5483ef4d/画皮 超清.mp4"
+    }
+}
+{ 
+    "_id" : ObjectId("5d78a0d6ef1a733a5cb84ddd"), 
+    "souceId" : "67686", 
+    "chapterName" : "金鸡SSSBD粤语中字", 
+    "chapterUrl" : "/?m=vod-detail-id-67686.html", 
+    "chapterType" : "剧情片", 
+    "chapterUpdate" : "2019-09-10", 
+    "address" : {
+        "image" : "https://img.tupian-zuida.com/pic/upload/vod/2019-09-10/201909101568087576.jpg", 
+        "name" : "金鸡SSS", 
+        "zuidam3u8" : "http://yi.jingdianzuida.com/20190908/nhB1Rfru/index.m3u8", 
+        "zuidall" : "http://yi.jingdianzuida.com/share/Pa8yM67uDfcGaHub", 
+        "迅雷下载" : "http://xiazai.vpszuida.com/20190909/338_3c8804d6/金鸡sssBD粤语中字.mp4"
+    }
+}
+{ 
+    "_id" : ObjectId("5d78a0d6ef1a733a5cb84dde"), 
+    "souceId" : "67672", 
+    "chapterName" : "铁马骝II之街头杀手国语/粤语", 
+    "chapterUrl" : "/?m=vod-detail-id-67672.html", 
+    "chapterType" : "动作片", 
+    "chapterUpdate" : "2019-09-10", 
+    "address" : {
+        "image" : "https://img.tupian-zuida.com/pic/upload/vod/2019-09-10/201909101568083869.jpg", 
+        "name" : "铁马骝II之街头杀手", 
+        "zuidam3u8" : "http://yi.jingdianzuida.com/20190908/c5PUBHkF/index.m3u8", 
+        "zuidall" : "http://yi.jingdianzuida.com/share/WVAQW2tFlruO5vti", 
+        "迅雷下载" : "http://xiazai.vpszuida.com/20190909/355_1b4e7dab/铁马骝Ⅱ 街头杀手 1996.1080P 粤语无字.mp4"
+    }
+}
+{ 
+    "_id" : ObjectId("5d78a0d6ef1a733a5cb84ddf"), 
+    "souceId" : "67778", 
+    "chapterName" : "不能说的游戏HD1280高清中字版", 
+    "chapterUrl" : "/?m=vod-detail-id-67778.html", 
+    "chapterType" : "剧情片", 
+    "chapterUpdate" : "2019-09-11", 
+    "address" : {
+        "image" : "https://img.tupian-zuida.com/pic/upload/vod/2019-09-11/201909111568164633.jpg", 
+        "name" : "不能说的游戏", 
+        "zuidam3u8" : "http://wuji.zhulong-zuida.com/20190911/7937_6755a4a7/index.m3u8", 
+        "zuidall" : "http://wuji.zhulong-zuida.com/share/ca3a856a28df7d77d948949206ff9fdf", 
+        "迅雷下载" : "http://zuida.downzuida.com/1909/不能说的游戏.HD1280高清中英双字版.mp4"
+    }
+}
+{ 
+    "_id" : ObjectId("5d78a0d6ef1a733a5cb84de0"), 
+    "souceId" : "67674", 
+    "chapterName" : "特警屠龙国语超清", 
+    "chapterUrl" : "/?m=vod-detail-id-67674.html", 
+    "chapterType" : "动作片", 
+    "chapterUpdate" : "2019-09-10", 
+    "address" : {
+        "image" : "https://img.tupian-zuida.com/pic/upload/vod/2019-09-10/201909101568084237.jpg", 
+        "name" : "特警屠龙", 
+        "zuidam3u8" : "http://yi.jingdianzuida.com/20190908/giCQR0q1/index.m3u8", 
+        "zuidall" : "http://yi.jingdianzuida.com/share/8WTSamUDL2SMSHO3", 
+        "迅雷下载" : "http://xiazai.vpszuida.com/20190909/379_4b320998/特警屠龙 超清.mp4"
+    }
+}
+{ 
+    "_id" : ObjectId("5d78a0d6ef1a733a5cb84de1"), 
+    "souceId" : "67676", 
+    "chapterName" : "十月围城BD国语超清", 
+    "chapterUrl" : "/?m=vod-detail-id-67676.html", 
+    "chapterType" : "剧情片", 
+    "chapterUpdate" : "2019-09-10", 
+    "address" : {
+        "image" : "https://img.tupian-zuida.com/pic/upload/vod/2019-09-10/201909101568084384.jpg", 
+        "name" : "十月围城", 
+        "zuidam3u8" : "http://yi.jingdianzuida.com/20190908/l1mWUzHH/index.m3u8", 
+        "zuidall" : "http://yi.jingdianzuida.com/share/c5iEyZ3sY7gvXrnD", 
+        "迅雷下载" : "http://xiazai.vpszuida.com/20190909/349_24e01c97/十月围城 超清.mp4"
+    }
+}
+{ 
+    "_id" : ObjectId("5d78a0d6ef1a733a5cb84de2"), 
+    "souceId" : "67683", 
+    "chapterName" : "龙虎门国语/粤语", 
+    "chapterUrl" : "/?m=vod-detail-id-67683.html", 
+    "chapterType" : "剧情片", 
+    "chapterUpdate" : "2019-09-10", 
+    "address" : {
+        "image" : "https://img.tupian-zuida.com/pic/upload/vod/2019-09-10/201909101568087217.jpg", 
+        "name" : "龙虎门", 
+        "zuidam3u8" : "http://yi.jingdianzuida.com/20190908/oKKhxnJQ/index.m3u8", 
+        "zuidall" : "http://yi.jingdianzuida.com/share/7BYoxo3V9S9lBdrZ", 
+        "迅雷下载" : "http://xiazai.vpszuida.com/20190909/342_dfbca8e3/龙虎门(粤语版) 超清.mp4"
+    }
+}
+{ 
+    "_id" : ObjectId("5d78a0d6ef1a733a5cb84de3"), 
+    "souceId" : "67671", 
+    "chapterName" : "卧虎藏龙：青冥宝剑HD国语高清", 
+    "chapterUrl" : "/?m=vod-detail-id-67671.html", 
+    "chapterType" : "剧情片", 
+    "chapterUpdate" : "2019-09-10", 
+    "address" : {
+        "image" : "https://img.tupian-zuida.com/pic/upload/vod/2019-09-10/201909101568083748.jpg", 
+        "name" : "卧虎藏龙：青冥宝剑", 
+        "zuidam3u8" : "http://yi.jingdianzuida.com/20190908/OwNrYTG4/index.m3u8", 
+        "zuidall" : "http://yi.jingdianzuida.com/share/k2LvVOETXl4dk9GO", 
+        "迅雷下载" : "http://xiazai.vpszuida.com/20190909/356_dbab93fb/卧虎藏龙：青冥宝剑-国语720P.mp4"
+    }
+}
+{ 
+    "_id" : ObjectId("5d78a0d6ef1a733a5cb84de4"), 
+    "souceId" : "67677", 
+    "chapterName" : "神探驾到国语/粤语", 
+    "chapterUrl" : "/?m=vod-detail-id-67677.html", 
+    "chapterType" : "喜剧片", 
+    "chapterUpdate" : "2019-09-10", 
+    "address" : {
+        "image" : "https://img.tupian-zuida.com/pic/upload/vod/2019-09-10/201909101568084464.jpg", 
+        "name" : "神探驾到", 
+        "zuidam3u8" : "http://yi.jingdianzuida.com/20190908/z2SywuoS/index.m3u8", 
+        "zuidall" : "http://yi.jingdianzuida.com/share/iWagydod62VB6ZTB", 
+        "迅雷下载" : "http://xiazai.vpszuida.com/20190909/378_89efe725/神探驾到(粤语版) 超清.mp4"
+    }
+}
+{ 
+    "_id" : ObjectId("5d78a0d6ef1a733a5cb84de5"), 
+    "souceId" : "67692", 
+    "chapterName" : "导火线BD国语超清", 
+    "chapterUrl" : "/?m=vod-detail-id-67692.html", 
+    "chapterType" : "动作片", 
+    "chapterUpdate" : "2019-09-10", 
+    "address" : {
+        "image" : "https://img.tupian-zuida.com/pic/upload/vod/2019-09-10/201909101568088049.jpg", 
+        "name" : "导火线", 
+        "zuidam3u8" : "http://yi.jingdianzuida.com/20190908/1ZRGOEqJ/index.m3u8", 
+        "zuidall" : "http://yi.jingdianzuida.com/share/Aea36NPKfg8B1Nsz", 
+        "迅雷下载" : "http://xiazai.vpszuida.com/20190909/332_c73ccd05/导火线(普通话版) 超清.mp4"
+    }
+}
+{ 
+    "_id" : ObjectId("5d78a0d6ef1a733a5cb84de6"), 
+    "souceId" : "67705", 
+    "chapterName" : "黑色城市BD国语超清", 
+    "chapterUrl" : "/?m=vod-detail-id-67705.html", 
+    "chapterType" : "动作片", 
+    "chapterUpdate" : "2019-09-10", 
+    "address" : {
+        "image" : "https://img.tupian-zuida.com/pic/upload/vod/2019-09-10/201909101568100545.jpg", 
+        "name" : "黑色城市", 
+        "zuidam3u8" : "http://yi.jingdianzuida.com/20190908/RasC8vvO/index.m3u8", 
+        "zuidall" : "http://yi.jingdianzuida.com/share/ZOq7cfYzRbnXhzxH", 
+        "迅雷下载" : "http://xiazai.vpszuida.com/20190909/323_f476c503/《黑色城市》（国语超高清）.mp4"
+    }
+}
+{ 
+    "_id" : ObjectId("5d78a0d6ef1a733a5cb84de7"), 
+    "souceId" : "67693", 
+    "chapterName" : "超时空圣战BD国语超清", 
+    "chapterUrl" : "/?m=vod-detail-id-67693.html", 
+    "chapterType" : "动作片", 
+    "chapterUpdate" : "2019-09-10", 
+    "address" : {
+        "image" : "https://img.tupian-zuida.com/pic/upload/vod/2019-09-10/201909101568088138.jpg", 
+        "name" : "超时空圣战", 
+        "zuidam3u8" : "http://yi.jingdianzuida.com/20190908/zadJjfPz/index.m3u8", 
+        "zuidall" : "http://yi.jingdianzuida.com/share/nQMH29Z2XPIfLKhd", 
+        "迅雷下载" : "http://xiazai.vpszuida.com/20190909/331_38883a47/超时空圣战 超清.mp4"
+    }
+}
+{ 
+    "_id" : ObjectId("5d78a0d6ef1a733a5cb84de8"), 
+    "souceId" : "67673", 
+    "chapterName" : "特殊身份国语/粤语", 
+    "chapterUrl" : "/?m=vod-detail-id-67673.html", 
+    "chapterType" : "动作片", 
+    "chapterUpdate" : "2019-09-10", 
+    "address" : {
+        "image" : "https://img.tupian-zuida.com/pic/upload/vod/2019-09-10/201909101568084111.jpg", 
+        "name" : "特殊身份", 
+        "zuidam3u8" : "http://yi.jingdianzuida.com/20190908/akyWe12T/index.m3u8", 
+        "zuidall" : "http://yi.jingdianzuida.com/share/xIDN2lEobLnU1OCx", 
+        "迅雷下载" : "http://xiazai.vpszuida.com/20190909/381_c7310f69/特殊身份(粤语版) 超清.mp4"
+    }
+}
+{ 
+    "_id" : ObjectId("5d78a0d6ef1a733a5cb84de9"), 
+    "souceId" : "67682", 
+    "chapterName" : "魔唇劫DVD国语", 
+    "chapterUrl" : "/?m=vod-detail-id-67682.html", 
+    "chapterType" : "喜剧片", 
+    "chapterUpdate" : "2019-09-10", 
+    "address" : {
+        "image" : "https://img.tupian-zuida.com/pic/upload/vod/2019-09-10/201909101568087068.jpg", 
+        "name" : "魔唇劫", 
+        "zuidam3u8" : "http://yi.jingdianzuida.com/20190908/U6uWy9uB/index.m3u8", 
+        "zuidall" : "http://yi.jingdianzuida.com/share/VFQmJ3jDWhrCPCSg", 
+        "迅雷下载" : "http://xiazai.vpszuida.com/20190909/343_a941bf28/魔唇劫.1991.DVD国语.mp4"
+    }
+}
+{ 
+    "_id" : ObjectId("5d78a0d6ef1a733a5cb84dea"), 
+    "souceId" : "67679", 
+    "chapterName" : "情逢敌手国语/粤语", 
+    "chapterUrl" : "/?m=vod-detail-id-67679.html", 
+    "chapterType" : "喜剧片", 
+    "chapterUpdate" : "2019-09-10", 
+    "address" : {
+        "image" : "https://img.tupian-zuida.com/pic/upload/vod/2019-09-10/201909101568084653.jpg", 
+        "name" : "情逢敌手", 
+        "zuidam3u8" : "http://yi.jingdianzuida.com/20190908/thL47xzM/index.m3u8", 
+        "zuidall" : "http://yi.jingdianzuida.com/share/qawLN0TrUQg0ca3X", 
+        "迅雷下载" : "http://xiazai.vpszuida.com/20190909/345_379ba3b4/情逢敌手-国语高清.mp4"
+    }
+}
+{ 
+    "_id" : ObjectId("5d78a0d6ef1a733a5cb84deb"), 
+    "souceId" : "67697", 
+    "chapterName" : "安娜2019HD1280高清中英双字版", 
+    "chapterUrl" : "/?m=vod-detail-id-67697.html", 
+    "chapterType" : "动作片", 
+    "chapterUpdate" : "2019-09-10", 
+    "address" : {
+        "image" : "https://img.tupian-zuida.com/pic/upload/vod/2019-09-10/201909101568095373.jpg", 
+        "name" : "安娜2019", 
+        "zuidam3u8" : "http://bili.meijuzuida.com/20190910/21391_9c89f134/index.m3u8", 
+        "zuidall" : "http://bili.meijuzuida.com/share/109ac6c7e70ef69fcbf717f86c278ed1", 
+        "迅雷下载" : "http://down.phpzuida.com/1909/安娜2019.HD1080高清中英双字版.mp4"
+    }
+}
+{ 
+    "_id" : ObjectId("5d78a0d6ef1a733a5cb84dec"), 
+    "souceId" : "67685", 
+    "chapterName" : "锦衣卫国语720P", 
+    "chapterUrl" : "/?m=vod-detail-id-67685.html", 
+    "chapterType" : "剧情片", 
+    "chapterUpdate" : "2019-09-10", 
+    "address" : {
+        "image" : "https://img.tupian-zuida.com/pic/upload/vod/2019-09-10/201909101568087500.jpg", 
+        "name" : "锦衣卫", 
+        "zuidam3u8" : "http://yi.jingdianzuida.com/20190908/U01Mo0ku/index.m3u8", 
+        "zuidall" : "http://yi.jingdianzuida.com/share/vJRRNMsihQ1aKd7i", 
+        "迅雷下载" : "http://xiazai.vpszuida.com/20190909/339_31e147b3/锦衣卫-国语720P.mp4"
+    }
+}

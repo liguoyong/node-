@@ -12,6 +12,7 @@ router.get('/', function (req, res, next) {
   
     HomeModel.getPosts(author)
       .then(function (posts) {
+        console.log(posts)
         res.render('home', {
           posts: posts
         })

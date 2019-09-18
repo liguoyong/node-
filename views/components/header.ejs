@@ -7,11 +7,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="keywords" content="fly,layui,前端社区">
   <meta name="description" content="Fly社区是模块化前端UI框架Layui的官网社区，致力于为web开发提供强劲动力">
-  <link rel="stylesheet" href="//cdn.bootcss.com/semantic-ui/2.1.8/semantic.min.css">
   <link rel="stylesheet" href="/static/css/layui.css">
   <link rel="stylesheet" href="/static/css/global.css">
-  <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
-  <script src="//cdn.bootcss.com/semantic-ui/2.1.8/semantic.min.js"></script>
+  <script src="/static/js/jquery-3.1.1.min.js"></script>
+  <script src="/static/js/layui.js"></script>
+  <script src="/static/js/ejs.min.js"></script>
+  <script src="/static/js/common.js"></script>
 </head>
 <style>
     .avatar {
@@ -28,38 +29,36 @@
     }
     .layui-nav-item:hover>dl{
       display:block;
-    } 
+    }
   </style>
 <body>
 <div class="fly-header layui-bg-black">
     <div class="layui-container">
         <a class="fly-logo" href="/">
-            <img src="../../res/images/logo.png" alt="layui">
+            <img src="http://cd7.yesapi.net/8110708D4EC6498C13A5DFB832D9CB0F_20190829152251_812a236f31e64d9554a5d1ea834ff93f.png"  style="width: 72px;height: 42px;border-radius: 50%;" alt="layui">
         </a>
         <ul class="layui-nav fly-nav layui-hide-xs">
             <li class="layui-nav-item layui-this">
-                <a href="/"><i class="iconfont icon-jiaoliu"></i>交流</a>
+                <a href="/posts/chat"><i class="iconfont icon-jiaoliu"></i>交流</a>
             </li>
             <li class="layui-nav-item">
                 <a href="/posts/create"><i class="iconfont icon-iconmingxinganli"></i>发表文章</a>
             </li>
             <li class="layui-nav-item">
-                <a href="http://www.layui.com/" target="_blank"><i class="iconfont icon-ui"></i>框架</a>
+                <a href="/posts/video"><i class="iconfont icon-ui"></i>资源</a>
             </li>
         </ul>
-
         <ul class="layui-nav fly-nav-user">
             <% if (user) { %>
             <li class="layui-nav-item"> <a class="fly-nav-avatar" href="/posts?author=<%= user._id %>"
                     id="LAY_header_avatar"> <cite class="layui-hide-xs"><%= user.name %></cite> <img
                         src="/img/<%= user.avatar %>"> <span class="layui-nav-more"></span></a>
                 <dl class="layui-nav-child layui-anim layui-anim-upbit">
-                    <dd><a href="/user/">用户中心</a></dd>
-                    <dd><a href="/posts/set">基本设置</a></dd>
+                    <dd><a href="/posts?author=<%= user._id %>">用户中心</a></dd>
+                    <dd><a href="/posts/set#/set">基本设置</a></dd>
                     <hr>
-                    <dd><a href="/user/message/">我的消息</a></dd>
-                    <dd><a href="/user/product/">已购产品</a></dd>
-                    <dd><a href="/u/44093952">我的主页</a></dd>
+                    <dd><a href="/posts/set#/message/">我的消息<% if (common) { %><span class="layui-badge layui-bg-green"><%= common %></span><% } %></a></dd>
+                    <dd><a href="/posts?author=<%= user._id %>">我的主页</a></dd>
                     <hr style="margin: 5px 0;">
                     <dd><a href="/signout" style="text-align: center;">退出</a></dd>
                 </dl>

@@ -1,0 +1,53 @@
+<style>
+.videoList .fly-list li{
+  padding: 6px 15px 6px 15px;
+}
+.videoList .chapterUpdate{
+  float:right;
+}
+</style>
+<div class="layui-row layui-col-space15 videoList">
+    <div>
+      <ul>
+       <% if (resouce && resouce.length>0) { %>
+        <div class="layui-col-md9" style="padding-top: 50px;">
+          <ul class="fly-list" style="border:1px solid #ccc;">
+              <li style="background: #ccc;">
+                  <div class="layui-row">
+                      <div class="layui-col-xs6" style="text-align: center;">
+                          影片名称
+                      </div>
+                      <div class="layui-col-xs3">
+                          <span class="chapterUpdate">影片类别</span>
+                      </div>
+                      <div class="layui-col-xs3">
+                          <span class="chapterUpdate">更新时间</span>
+                      </div>
+                    </div>
+              </li>
+            <% resouce.forEach(function (resouce) { %>
+              <% address = JSON.parse(resouce.address)%>
+              <li>
+                  <div class="layui-row">
+                      <div class="layui-col-xs6">
+                          <a href="/posts/video?souceId=<%= resouce.souceId %>"><%= resouce.chapterName %></a>
+                      </div>
+                      <div class="layui-col-xs3">
+                          <span class="chapterUpdate"><%= resouce.chapterType %></span>
+                      </div>
+                      <div class="layui-col-xs3">
+                          <span class="chapterUpdate"><%= resouce.chapterUpdate %></span>
+                      </div>
+                    </div>
+              </li>
+            <% }) %>
+          </ul>
+        </div>
+        <div class="layui-col-md4">
+        </div>
+        <% } %>
+      </ul>
+    </div>
+  </div>
+  <script>
+  </script>

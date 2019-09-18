@@ -1,0 +1,206 @@
+<%- include('../components/header') %>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/video.js/7.3.0/video-js.min.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/video.js/7.3.0/video.min.js"></script>
+<script src="/static/js/html2canvas.min.js"></script>
+<script src="/static/js/canvas2image.js"></script>
+<script src="/static/js/base64.js"></script>
+<style>
+  body {
+    background: #27272f;
+    min-height: 791px;
+  }
+
+  .layui-col-md3 h2 {
+    display: block;
+    font-weight: bold;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #FFF;
+    font-size: 16px;
+  }
+
+  .chapterDetaile {
+    color: #ad8080;
+    line-height: 20px;
+    margin-top: 18px;
+    font-size: 12px;
+  }
+
+  .chapterPerformer {
+    color: #ad8080;
+    font-size: 12px;
+    padding-top: 10px;
+    display: block;
+  }
+
+  .chapterDetaile>span,
+  .chapterPerformer>span {
+    color: #999;
+  }
+
+  .rightBox {
+    position: absolute;
+    background: #000;
+    z-index: 100;
+    width: 36px;
+    opacity: 0.5;
+    right: 8px;
+    top: 245px;
+  }
+
+  .rightUl {
+    color: #fff;
+    text-align: center;
+    line-height: 24px;
+    padding: 10px 0;
+    font-size: 12px;
+  }
+</style>
+<div class="layui-row layui-col-space15">
+  <div class="layui-col-md9">
+    <div class="eight wide column content" style="margin-top: 50px;">
+      <% address = JSON.parse(souce.address)%>
+      <video id="myVideo" class="video-js vjs-big-play-centered vjs-fluid" data-setup='{"aspectRatio":"16:9"}' 
+        bind-url="<%- address['迅雷下载'] %>" bing-image="<%- address['image'] %>">
+        <p class="vjs-no-js">
+          To view this video please enable JavaScript, and consider upgrading to a
+          web browser that
+          <a href="https://videojs.com/html5-video-support/" target="_blank">
+            supports HTML5 video
+          </a>
+        </p>
+      </video>
+      <div class="rightBox">
+        <ul class="rightUl">
+          <li class="screen">截图</li>
+          <li>录屏</li>
+          <li>分享</li>
+        </ul>
+      </div>
+      <div id="images">
+          <!-- <canvas id="thecanvas" width="873" height="436.5"></canvas> -->
+      </div>
+      
+      <div id="output"></div>
+      <button id="Download">Download</button>
+    </div>
+  </div>
+  <div class="layui-col-md3" style="margin-top: 60px;">
+    <h2><%- address.name %></h2>
+    <span class="chapterPerformer">
+      导演：<span><%-address['导演']%></span>
+    </span>
+    <span class="chapterPerformer">
+      主演：<span><%-address['主演']%></span>
+    </span>
+    <span class="chapterPerformer">
+      类型：<span><%-address['类型']%></span>
+    </span>
+    <span class="chapterPerformer">
+      地区：<span><%-address['地区']%></span>
+    </span>
+    <span class="chapterPerformer">
+      语言：<span><%-address['语言']%>
+      </span>
+      <p class="chapterDetaile">剧情介绍：<span><%-address.chapterDetaile%></span></p>
+  </div>
+</div>
+<script>
+  var videoID = $('#myVideo');
+  var player = videojs(document.getElementById('myVideo'), {
+    controls: true, // 是否显示控制条
+    poster: 'xxx', // 视频封面图地址
+    preload: 'auto',
+    autoplay: false,
+    fluid: true, // 自适应宽高
+    language: 'zh-CN', // 设置语言
+    muted: false, // 是否静音
+    inactivityTimeout: false,
+    controlBar: { // 设置控制条组件
+      /* 使用children的形式可以控制每一个控件的位置，以及显示与否 */
+      children: [
+        { name: 'playToggle' }, // 播放按钮
+        { name: 'currentTimeDisplay' }, // 当前已播放时间
+        { name: 'progressControl' }, // 播放进度条
+        { name: 'durationDisplay' }, // 总时间
+        { // 倍数播放
+          name: 'playbackRateMenuButton',
+          'playbackRates': [0.5, 1, 1.5, 2, 2.5]
+        },
+        {
+          name: 'volumePanel', // 音量控制
+          inline: false, // 不使用水平方式
+        },
+        { name: 'FullscreenToggle' } // 全屏
+      ]
+    },
+    sources: [ // 视频源
+      {
+        src: videoID.attr("bind-url"),
+        type: 'video/mp4',
+        poster: videoID.attr("bind-image")
+      }
+    ]
+  }, function () {
+    console.log('视频可以播放了', this);
+  });
+  
+/*生成canvas图形*/
+
+// 获取按钮id
+var btnSave = $('.screen');
+// 获取内容id
+
+// 进行canvas生成
+btnSave.on("click",function(){
+var content = $('.content');
+  html2canvas(content, {
+        onrendered: function(canvas) {
+        	//添加属性
+        	canvas.setAttribute('id','thecanvas');
+			//读取属性值
+			// var value= canvas.getAttribute('id');
+            document.getElementById('images').appendChild(canvas);
+        }
+	});
+})
+
+/*
+ * 说明
+ * html2canvas，目前该插件还在开发中，暂不支持带有图片的div转换。图片会被忽略
+ * 对一些的默认样式的支持可能不那么尽如人意，建议自己定义样式,
+ * 不支持iframe
+ * 不支持跨域图片
+ * 不能在浏览器插件中使用
+ * 部分浏览器上不支持SVG图片
+ * 不支持Flash
+ * 不支持古代浏览器和IE，如果你想确认是否支持某个浏览器，可以用它访问 http://deerface.sinaapp.com/ 试试
+ */
+ var Download = document.getElementById("Download");
+Download.onclick = function(){
+	var oCanvas = document.getElementById("thecanvas");
+
+	/*自动保存为png*/
+	// 获取图片资源
+	var img_data1 = Canvas2Image.saveAsPNG(oCanvas, true).getAttribute('src');
+	saveFile(img_data1, 'abc');
+
+
+	/*下面的为原生的保存，不带格式名*/
+	// 这将会提示用户保存PNG图片
+	// Canvas2Image.saveAsPNG(oCanvas);
+}
+// 保存文件函数
+var saveFile = function(data, filename){
+    var save_link = document.createElementNS('http://www.w3.org/1999/xhtml', 'a');
+    save_link.href = data;
+    save_link.download = filename;
+   
+    var event = document.createEvent('MouseEvents');
+    event.initMouseEvent('click', true, false, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
+    save_link.dispatchEvent(event);
+};
+
+</script>
+<%- include('../components/footer') %>

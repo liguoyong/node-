@@ -1,0 +1,180 @@
+<!-- <script src="/static/js/socket.io.js"></script> -->
+<style>
+  #messages li {
+    min-height: 60px;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
+  #messages {
+    overflow: auto;
+    height: 500px;
+    padding-top: 20px;
+    border-bottom: 1px solid #e6e1e1;
+  }
+
+  textarea {
+    display: block;
+    width: 100%;
+    padding: 5px 0 0 0;
+    height: 68px;
+    line-height: 20px;
+    border: none;
+    overflow: auto;
+    resize: none;
+    background: none;
+  }
+
+  .iconL {
+    float: left;
+    padding: 0 10px 0 0;
+  }
+
+  .contL {
+    max-width: 74%;
+    display: inline-block;
+    word-break: break-all;
+  }
+
+  .iconR {
+    float: right;
+    margin-right: 10px;
+  }
+
+  .contR {
+    float: right;
+    word-break: break-all;
+    max-width: 74%;
+  }
+
+  .layim-chat-text {
+    margin-top: 0;
+  }
+
+  .layim-chat-user {
+    position: inherit;
+  }
+
+  #send {
+    height: 28px;
+    line-height: 28px;
+    position: relative;
+    bottom: -9px;
+    right: -494px;
+    float: none;
+    padding: 0 20px;
+  }
+  html, body {
+    overflow-x: unset;
+  }
+</style>
+<script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+<div class="layui-row layui-col-space15">
+  <div class="layui-row">
+    <div class="layui-col-xs3">
+      <div class="grid-demo grid-demo-bg1" style="visibility: hidden;">3/12</div>
+    </div>
+    <div class="layui-col-xs6">
+      <div class="grid-demo" style="margin-top: 59px;border: 1px solid #ccc;">
+        <ul id="messages" class="fly-nav-avatar">
+
+        </ul>
+        <div class="layim-chat-textarea" style="height: 160px;">
+          <p><span class="clearHistory" style="font-size: 12px;float: right;color: #ccc;padding: 5px 10px 0 10px;">清屏<span></span></span></p>
+          <form id="socketForm" action="">
+            <textarea id="m" autocomplete="off" style="height: 90px;"></textarea>
+            <button class="layui-btn layui-btn-sm" id="send">Send</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="layui-col-xs3">
+      <div class="grid-demo grid-demo-bg1" style="visibility: hidden;">3/12</div>
+    </div>
+  </div>
+</div>
+<script>
+  layui.use('layim', function () {
+    var layim = layui.layim;
+  });
+  // 1. 与服务器端建立连接
+  const socket = io.connect("http://localhost:3006");
+  const uid = '<% if (user) { %><%= user._id %><% } else { %>""<% } %>';
+  // 2. 监听send按钮点击的事件
+  // $("#send").click(function(){
+  //     // 获取输入的信息
+  //     let message = $("#message").val().trim();
+  //     // 向服务器端发送信息
+  //     socket.emit("sentToServer", message);
+  // });
+
+  // // 3. 获取服务端发送过来的信息
+  // socket.on("sendToClient", message => {
+  //     console.log(message);
+  // });
+  /**
+   * 发布订阅(广播), 一端发布, 可以让多端触发
+   */
+  //滚动效果
+  function goErrorScrollTop() {
+    var height = document.getElementById("messages").scrollHeight;
+    $('#messages').animate({ scrollTop: height }, 500);
+  }
+  $("#socketForm").bind("keydown", function (e) {
+    // 兼容FF和IE和Opera    
+    var theEvent = e || window.event;
+    var code = theEvent.keyCode || theEvent.which || theEvent.charCode;
+    if (code == 13) {
+      //回车执行查询
+      $("#send").click();
+    }
+  });
+  var chat_historise = localStorage.getItem("chat_historise");
+  if (!chat_historise) {
+    localStorage.setItem("chat_historise", '[]');
+  } else {
+    chat_historise = JSON.parse(chat_historise);
+    for (var i = 0; i < chat_historise.length; i++) {
+      if (uid == chat_historise[i].id) {
+        var ele = `<li class="layim-chat-mine"><a class="iconR" href="/posts?author=${chat_historise[i].id}"><img src="/img/${chat_historise[i].avatar}"></a><span class="layim-chat-text contR">${chat_historise[i].content}</span><p style="clear:both;"></p></li>`;
+      } else {
+        var ele = `<li class="layim-chat-user"><a class="iconL" href="/posts?author=${chat_historise[i].id}"><img src="/img/${chat_historise[i].avatar}"></a><span class="layim-chat-text contL">${chat_historise[i].content}</span><p style="clear:both;"></p></li>`;
+      }
+      $('#messages').append($(ele));
+    }
+  }
+  $('.clearHistory').click(function(){
+    localStorage.setItem("chat_historise", '[]');
+    $('#messages').empty();
+  })
+  $(function () {
+    $('#socketForm').submit(function () {
+      var socketparmas = {};
+      socketparmas.id = '<% if (user) { %><%= user._id %><% } else { %>""<% } %>';
+      socketparmas.content = $('#m').val();
+      socketparmas.avatar = '<% if (user) { %><%= user.avatar %><% } else { %>""<% } %>';
+      var times = new Date().format("yyyy-MM-dd hh:mm:ss");
+      socketparmas.date = times;
+      console.log(socketparmas.content, "sad")
+      if ($.trim($('#m').val()) != "") {
+        JSON.stringify(socketparmas)
+        socket.emit('chat message', socketparmas);
+      }
+      $('#m').val('');
+      return false;
+    });
+    socket.on('chat message', function (msg) {
+      var socketparmas = msg;
+      if (uid == socketparmas.id) {
+        var ele = `<li class="layim-chat-mine"><a class="iconR" href="/posts?author=${socketparmas.id}"><img src="/img/${socketparmas.avatar}"></a><span class="layim-chat-text contR">${socketparmas.content}</span><p style="clear:both;"></p></li>`;
+      } else {
+        var ele = `<li class="layim-chat-user"><a class="iconL" href="/posts?author=${socketparmas.id}"><img src="/img/${socketparmas.avatar}"></a><span class="layim-chat-text contL">${socketparmas.content}</span><p style="clear:both;"></p></li>`;
+      }
+      $('#messages').append($(ele));
+      chat_historise.push(msg)
+      localStorage.setItem("chat_historise", JSON.stringify(chat_historise));
+      goErrorScrollTop();
+      // window.scrollTo(0, document.body.scrollHeight);
+    });
+  });
+</script>
